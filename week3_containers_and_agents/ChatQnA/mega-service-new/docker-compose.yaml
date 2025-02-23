@@ -1,0 +1,15 @@
+services:
+  megaservice:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: megaservice
+    ports:
+      - "8888:8888"
+    ipc: host
+    restart: always
+
+networks:
+  exampro.co:
+    name: exampro.co
+    # driver: bridge no need to add this as it is default
